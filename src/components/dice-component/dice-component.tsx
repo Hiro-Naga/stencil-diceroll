@@ -1,4 +1,4 @@
-import { Component, h, Prop } from "@stencil/core";
+import { Component, h, State } from "@stencil/core";
 
 @Component({
   tag: 'dice-component',
@@ -6,9 +6,9 @@ import { Component, h, Prop } from "@stencil/core";
   shadow: true,
 })
 export class DiceComponent {
-  @Prop() times: number = 0;
-  @Prop() sides: number = 0;
-  @Prop() result: number = 0;
+  @State() times: number = 0;
+  @State() sides: number = 0;
+  @State() result: number = 0;
 
   componentWillLoad() {}
 
